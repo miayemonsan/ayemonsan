@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Win Moe - Advanced CV Profile</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* BASE STYLES & TYPOGRAPHY */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.5;
+            margin: 0;
+            padding: 40px;
+            background-color: #f0f2f5; /* Light background for the page */
+        }
+        
+        /* CV CONTAINER */
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            min-height: 1100px; /* Ensures a good height for PDF print */
+        }
+
+        /* HEADER & NAME SECTION */
+        .header {
+            padding: 30px 40px 20px 40px;
+            background-color: #f8f8f8;
+            border-bottom: 2px solid #0077b6;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+        }
+
+        .header h2 {
+            margin: 5px 0 0 0;
+            font-size: 1.3em;
+            font-weight: 400;
+            color: #0077b6;
+            letter-spacing: 1px;
+        }
+
+        /* MAIN LAYOUT (TWO COLUMNS) */
+        .main-body {
+            display: flex;
+            flex-grow: 1;
+        }
+
+        /* LEFT SIDEBAR (The Advanced Design Element) */
+        .sidebar {
+            flex: 1; /* Takes about 30% of the space */
+            background-color: #0077b6; /* Professional Dark Blue */
+            color: #ffffff;
+            padding: 20px 20px;
+        }
+        
+        /* Sidebar Section Styling */
+        .sidebar h3 {
+            font-size: 1.1em;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            padding-bottom: 5px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Sidebar Content */
+        .sidebar p, .sidebar li {
+            font-size: 0.9em;
+            margin: 5px 0;
+            font-weight: 300;
+        }
+        
+        .sidebar i {
+            color: #ffffff;
+            margin-right: 10px;
+            width: 15px;
+            text-align: center;
+        }
+
+        .sidebar a {
+            color: #e0f7fa; /* Lighter color for links */
+            text-decoration: none;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* RIGHT CONTENT AREA */
+        .content {
+            flex: 2; /* Takes about 70% of the space */
+            padding: 20px 40px;
+        }
+
+        /* Main Content Section Headers (Advanced Look) */
+        .content h3 {
+            font-size: 1.4em;
+            color: #0077b6;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        
+        /* Subtle underline effect for main sections */
+        .content h3::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #333;
+            margin-top: 5px;
+        }
+
+        /* Work Experience & Education Entries */
+        .entry {
+            margin-bottom: 25px;
+        }
+
+        .entry h4 {
+            font-size: 1.1em;
+            color: #333;
+            margin: 0 0 5px 0;
+            font-weight: 600;
+        }
+        
+        .entry .meta {
+            font-size: 0.9em;
+            color: #666;
+            margin: 0 0 10px 0;
+            font-weight: 400;
+        }
+
+        .entry ul {
+            list-style: disc;
+            padding-left: 20px;
+            margin: 5px 0 0 0;
+            font-size: 0.95em;
+        }
+
+        .entry li {
+            margin-bottom: 5px;
+        }
+
+        /* PDF & Print Styling (Crucial for the "PDF look") */
+        @media print {
+            body {
+                padding: 0;
+                background: #fff;
+            }
+            .cv-container {
+                box-shadow: none;
+                border: none;
+                margin: 0;
+                width: 100%;
+                min-height: initial;
+            }
+            /* Force background color to print (often requires user setting) */
+            .sidebar {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                background-color: #0077b6 !important;
+                color: #ffffff !important;
+            }
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .cv-container {
+                flex-direction: column;
+                min-height: initial;
+            }
+            .main-body {
+                flex-direction: column;
+            }
+            .sidebar {
+                border-right: none;
+                padding: 20px;
+            }
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <div class="header">
+            <h1>WIN MOE</h1>
+            <h2>English Teacher</h2>
+        </div>
+
+        <div class="main-body">
+            <aside class="sidebar">
+                
+                <section class="contact-info">
+                    <h3><i class="fas fa-address-card"></i> Contact</h3>
+                    <p><i class="fas fa-phone-alt"></i> 0924854332, 09772518980</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:minwinmoe123@gmail.com">minwinmoe123@gmail.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Chaing Mai, Thailand</p>
+                </section>
+
+                <section class="personal-details">
+                    <h3><i class="fas fa-user"></i> Personal Details</h3>
+                    <p><strong>Gender:</strong> Male</p>
+                    <p><strong>Date of Birth:</strong> 15.10.1998</p>
+                    <p><strong>Nationality:</strong> Myanmar</p>
+                    <p><strong>Marital Status:</strong> Single</p>
+                    <p><strong>Passport No:</strong> MJ072280</p>
+                    <p><strong>Height/Weight:</strong> 172 cm / 57 kg</p>
+                </section>
+
+                <section class="languages">
+                    <h3><i class="fas fa-globe"></i> Languages</h3>
+                    <ul>
+                        <li>Mon (Native)</li>
+                        <li>Burmese (Fluent)</li>
+                        <li>English (Advanced)</li>
+                        <li>Thai (Conversational)</li>
+                    </ul>
+                </section>
+
+                <section class="skills">
+                    <h3><i class="fas fa-star"></i> Skills</h3>
+                    <ul>
+                        <li>Good Communication</li>
+                        <li>Good Self-Management</li>
+                        <li>Excellent Presentation</li>
+                        <li>Effective Social Skill</li>
+                        <li>Friendly and Adaptable</li>
+                    </ul>
+                </section>
+
+                <section class="certificates">
+                    <h3><i class="fas fa-certificate"></i> Certificates</h3>
+                    <ul>
+                        <li>Information Technology</li>
+                        <li>Pre-intermediate English</li>
+                        <li>Financial Literacy</li>
+                    </ul>
+                </section>
+            </aside>
+
+            <div class="content">
+                
+                <section class="career-objective">
+                    <h3>Career Objective</h3>
+                    <p>Aspiring educator with a strong commitment to fostering an inclusive, supportive, and dynamic learning environment. Eager to pursue a career in teaching, where I can leverage my English skills and passion for education to promote student growth, engagement, and well-being. Dedicated to utilizing innovative teaching methods, cultivating positive relationships, and supporting diverse learning needs to ensure every student has the opportunity to succeed academically and personally.</p>
+                </section>
+
+                <section class="work-experience">
+                    <h3>Work Experiences</h3>
+
+                    <div class="entry">
+                        <h4>Teaching</h4>
+                        <p class="meta">Mon National Primary School, Bnan Bane Village, Ye | 2023 - 2024</p>
+                        <ul>
+                            <li>Enhanced student proficiency in all English language domains: writing, reading, listening, speaking, grammar, and vocabulary.</li>
+                            <li>Integrated modern learning techniques to encourage **analysis, problem-solving, creativity**, cultural awareness, and **collaboration**.</li>
+                        </ul>
+                    </div>
+
+                    <div class="entry">
+                        <h4>Content Creater</h4>
+                        <p class="meta">Online, Social Media Platforms | 2019 - 2025</p>
+                        <ul>
+                            <li>Produced and shared engaging videos focusing on life experiences, general knowledge, and dedicated **English lessons** to support a wide audience of learners.</li>
+                            <li>Actively encouraged interaction, accepted feedback, and created a positive, supportive learning environment through digital platforms.</li>
+                        </ul>
+                    </div>
+
+                    <div class="entry">
+                        <h4>Teaching Online</h4>
+                        <p class="meta">Via Zoom (Poy English for All Learners Page) | 2019 - 2025</p>
+                        <ul>
+                            <li>Taught essential language components including writing, reading, listening, speaking, grammar, and pronunciation to enhance students' **fluency and accuracy**.</li>
+                            <li>Designed and created interactive lessons, building students' confidence and fostering **critical thinking** through real-world language applications.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="education">
+                    <h3>Education</h3>
+                    <div class="entry">
+                        <h4>Mon National College</h4>
+                        <p class="meta">2022 - 2024</p>
+                    </div>
+                    <div class="entry">
+                        <h4>Hpa-An University, Mathematics</h4>
+                        <p class="meta">2nd Year, 2019 - 2020</p>
+                    </div>
+                    <div class="entry">
+                        <h4>Mon Intensive English Program</h4>
+                        <p class="meta">2018</p>
+                    </div>
+                    <div class="entry">
+                        <h4>High School/ Matriculation Exam</h4>
+                        <p class="meta">2007 - 2018</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
