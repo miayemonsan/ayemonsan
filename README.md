@@ -54,14 +54,14 @@
      <li>Teaching English as a foreign language course</li>
       <li>Teaching English in primary</li>
       <li>Supporting children's learning in primary education today</li>
-      <li>Teaching English to Refugee and Diplaced Learner</li>
+      <li>Teaching to refugees and displaced learners</li>
       <li>Supporting children's mental health and wellbeing</li>
       <li>Gender in language education</li>
-      <li>TeachingEnglish: How to teach pronunciation</li>
-      <li>TeachingEnglish: How to teach listening</li>
+      <li>Teaching English: How to teach pronunciation</li>
+      <li>Teaching English: How to teach listening</li>
       <li>Young children, the outdoors and nature</li>
       <li>Primary education: listening and observing</li>
-      <li>TeachingEnglish: Understanding language systems</li>
+      <li>Teaching English: Understanding language systems</li>
       <li>Business Knowledge Sharing Workshop</li>
       <li>Career Planning and Job Search</li>
       <li>Mon Intensive English Program</li>
@@ -105,12 +105,9 @@
 
     <h3 style="color:#4b0082; border-bottom:3px solid #d0b3f2;">Education</h3>
     <p>B.A. English Communication Arts; Payap University (2024 – Present)</p>
-    <p>Associate Degree; Mon National College (2021 – 2024)</p>
+    <p>Associate Degree of Arts in Mass Media and Journalism; Mon National College (2021 – 2024)</p>
     <p>B.A. English; Hpa-An Distant University (2018 – 2019)</p>
 
-    <h3 style="color:#4b0082; border-bottom:3px solid #d0b3f2;"> Online Presence</h3>
-    <p>LinkedIn</p>
-    <p>www.linkedin.com/in/mi-aye-mon-san-328346295</p>
 
   </div>
 </div>
