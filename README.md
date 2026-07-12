@@ -55,8 +55,13 @@
       <li>Teaching English in primary</li>
       <li>Supporting children's learning in primary education today</li>
       <li>Teaching English to Refugee and Diplaced Learner</li>
-      <li>Supporting children's mental health andwellbeing</li>
+      <li>Supporting children's mental health and wellbeing</li>
       <li>Gender in language education</li>
+      <li>TeachingEnglish: How to teach pronunciation</li>
+      <li>TeachingEnglish: How to teach listening</li>
+      <li>Young children, the outdoors and nature</li>
+      <li>Primary education: listening and observing</li>
+      <li>TeachingEnglish: Understanding language systems</li>
       <li>Business Knowledge Sharing Workshop</li>
       <li>Career Planning and Job Search</li>
       <li>Mon Intensive English Program</li>
