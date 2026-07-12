@@ -51,7 +51,12 @@
 
     <h3 style="color:#4b0082; border-bottom:2px solid #4b0082;"> Certificates</h3>
     <ul>
+     <li>Teaching English as a foreign language course</li>
+      <li>Teaching English in primary</li>
+      <li>Supporting children's learning in primary education today</li>
       <li>Teaching English to Refugee and Diplaced Learner</li>
+      <li>Supporting children's mental health andwellbeing</li>
+      <li>Gender in language education</li>
       <li>Business Knowledge Sharing Workshop</li>
       <li>Career Planning and Job Search</li>
       <li>Mon Intensive English Program</li>
