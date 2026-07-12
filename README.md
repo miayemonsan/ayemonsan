@@ -6,9 +6,19 @@
     <h3 style="margin-top:8px; font-weight:500; color:#555;">English Instructor</h3>
   </div>
 
-  <!-- Photo -->
+ <div style="display:flex; align-items:center; gap:30px;">
+
+  <!-- Photo (Left Side) -->
   <div style="flex-shrink:0;">
-    <img src="amscvphoto.jpg" alt="Aye Mon San Photo" width="150" style="border-radius:50%; border:4px solid #fff; box-shadow:0 8px 20px rgba(0,0,0,0.2);">
+    <img src="amscvphoto.jpg" alt="Aye Mon San Photo" width="150"
+      style="border-radius:50%; border:4px solid #fff; box-shadow:0 8px 20px rgba(0,0,0,0.2);">
+  </div>
+
+  <!-- Your Information -->
+  <div>
+    <h1>Aye Mon San</h1>
+    <h2>English Instructor</h2>
+    <!-- Other information -->
   </div>
 </div>
 
