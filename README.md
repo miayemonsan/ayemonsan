@@ -18,16 +18,32 @@
   <!-- EXACT CONTAINER STYLE REQUESTED -->
   <div style="max-width: 950px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border-radius: 16px; overflow: hidden; font-family: 'Poppins', sans-serif; color: #333333; background: #ffffff;">
     
-    <!-- HEADER PROFILE -->
-    <div style="display: flex; align-items: center; justify-content: space-between; background: linear-gradient(135deg, #fbf2fa 0%, #f7e6f6 100%); padding: 40px 50px; color: #333; border-bottom: 1px solid #f2d0f0; width: 950px; box-sizing: border-box;">
-      <div style="text-align: left;">
-        <h1 style="margin: 0; font-size: 3em; font-weight: 700; color: #D622CD; letter-spacing: -1px; line-height: 1.1;">Aye Mon San</h1>
-        <h3 style="margin: 8px 0 0 0; font-size: 1.3em; font-weight: 500; color: #555555; letter-spacing: 0.5px; text-transform: uppercase;">English Instructor</h3>
-      </div>
-      <div style="flex-shrink: 0; margin-left: 20px;">
-        <img src="profile.JPG" alt="Aye Mon San Photo" width="130" height="130" style="border-radius: 50%; border: 4px solid #ffffff; box-shadow: 0 8px 24px rgba(214, 34, 205, 0.15); object-fit: cover;">
-      </div>
+   <!-- HEADER PROFILE -->
+<div style="display: flex; align-items: center; justify-content: space-between; background: linear-gradient(135deg, #fbf2fa 0%, #f7e6f6 100%); padding: 50px 50px; color: #333; border-bottom: 1px solid #f2d0f0; width: 950px; box-sizing: border-box; position: relative; overflow: hidden;">
+  
+  <!-- Subtle creative geometric background accent for the header itself -->
+  <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(214, 34, 205, 0.03); border-radius: 50%; pointer-events: none;"></div>
+
+  <div style="text-align: left; position: relative; z-index: 2;">
+    <h1 style="margin: 0; font-size: 3.2em; font-weight: 700; color: #D622CD; letter-spacing: -1px; line-height: 1.1;">Aye Mon San</h1>
+    <h3 style="margin: 10px 0 0 0; font-size: 1.25em; font-weight: 600; color: #555555; letter-spacing: 1.5px; text-transform: uppercase; display: inline-block; border-left: 3px solid #D622CD; padding-left: 10px; line-height: 1;">English Instructor</h3>
+  </div>
+
+  <!-- CREATIVE & PROFESSIONAL PORTRAIT FRAME DESIGN -->
+  <div style="position: relative; width: 150px; height: 150px; flex-shrink: 0; margin-right: 15px; z-index: 2;">
+    <!-- Creative background geometric element (Offset Rotated Square) -->
+    <div style="position: absolute; top: 5px; left: 5px; width: 140px; height: 140px; border-radius: 24px; background: rgba(214, 34, 205, 0.15); transform: rotate(8deg); z-index: 1;"></div>
+    
+    <!-- Secondary sleek accent border frame -->
+    <div style="position: absolute; top: 0; left: 0; width: 140px; height: 140px; border-radius: 24px; border: 2px solid #D622CD; transform: rotate(-3deg); z-index: 2;"></div>
+    
+    <!-- Main Image Container -->
+    <div style="position: absolute; top: 0; left: 0; width: 142px; height: 142px; border-radius: 22px; overflow: hidden; background: #ffffff; box-shadow: 0 10px 25px rgba(214, 34, 205, 0.12); z-index: 3;">
+      <img src="amscvphoto.jpg" alt="Aye Mon San Photo" width="142" height="142" style="object-fit: cover; width: 100%; height: 100%; display: block;">
     </div>
+  </div>
+
+</div>
 
     <!-- MAIN BODY LAYOUT -->
     <div style="display: flex; background: #ffffff; width: 950px; box-sizing: border-box;">
