@@ -25,7 +25,7 @@
         <h3 style="margin: 8px 0 0 0; font-size: 1.3em; font-weight: 500; color: #555555; letter-spacing: 0.5px; text-transform: uppercase;">English Instructor</h3>
       </div>
       <div style="flex-shrink: 0; margin-left: 20px;">
-        <img src="amscvphoto.jpg" alt="Aye Mon San Photo" width="130" height="130" style="border-radius: 50%; border: 4px solid #ffffff; box-shadow: 0 8px 24px rgba(214, 34, 205, 0.15); object-fit: cover;">
+        <img src="profile.JPG" alt="Aye Mon San Photo" width="130" height="130" style="border-radius: 50%; border: 4px solid #ffffff; box-shadow: 0 8px 24px rgba(214, 34, 205, 0.15); object-fit: cover;">
       </div>
     </div>
 
