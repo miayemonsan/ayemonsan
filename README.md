@@ -1,219 +1,666 @@
 
 <head>
   <meta charset="UTF-8">
-  <!-- This forces mobile screens to scale out and display the 950px wide layout fully -->
-  <meta name="viewport" content="width=1200, initial-scale=1.0">
-  <title>Aye Mon San - CV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aye Mon San | Portfolio Website</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    :root {
+      --primary: #D622CD;
+      --primary-light: #fbebfb;
+      --text-dark: #1e1e24;
+      --text-muted: #6b7280;
+      --bg-outer: #D622CD;
+      --card-bg: #ffffff;
+      --border-color: #f3f4f6;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
-      padding: 20px 0;
-      background-color: #f3f4f6;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-outer);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    /* Main Modern Canvas Wrapper */
+    .app-container {
+      width: 100%;
+      max-width: 1200px;
+      background: var(--card-bg);
+      border-radius: 40px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+      padding: 40px 60px 60px 60px;
+      position: relative;
+    }
+
+    /* Sticky/Fixed-style Navigation Bar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      position: sticky;
+      top: 0;
+      background: #ffffff;
+      z-index: 100;
+      padding: 10px 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1.5em;
+      color: var(--text-dark);
+      gap: 8px;
+    }
+
+    .logo-icon {
+      background: var(--primary);
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75em;
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 8px;
+      background: #fdfdfd;
+      padding: 6px 12px;
+      border-radius: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+      border: 1px solid var(--border-color);
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.9em;
+      font-weight: 500;
+      padding: 8px 18px;
+      border-radius: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    .btn-contact-nav {
+      background: var(--primary);
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 0.9em;
+      box-shadow: 0 10px 20px rgba(214, 34, 205, 0.2);
+    }
+
+    /* Section Component Layout Container */
+    .content-section {
+      padding: 80px 0 40px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .content-section:last-of-type {
+      border-bottom: none;
+    }
+
+    /* Section Headline Styling */
+    .section-headline {
+      font-size: 2em;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 40px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-headline::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 40px;
+      height: 4px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    /* SECTION 1: HERO HOME */
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 40px;
+      padding-top: 20px;
+    }
+
+    .hero-content {
+      max-width: 540px;
+    }
+
+    .accent-line {
+      width: 50px;
+      height: 4px;
+      background: var(--primary);
+      margin-bottom: 24px;
+      border-radius: 2px;
+    }
+
+    .hero-content h1 {
+      font-size: 3.4em;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.15;
+      margin-bottom: 8px;
+      letter-spacing: -1px;
+    }
+
+    .hero-content h1 span {
+      color: var(--primary);
+    }
+
+    .hero-tagline {
+      font-size: 0.95em;
+      color: var(--primary);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+
+    .hero-content p {
+      color: var(--text-muted);
+      font-size: 1.05em;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 20px;
+    }
+
+    .btn-primary, .btn-secondary {
+      padding: 16px 36px;
+      border-radius: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.95em;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(214, 34, 205, 0.3);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--primary);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .btn-primary:hover, .btn-secondary:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Mockup-Accurate Ring Visual Layout with Masking Fix */
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .circle-wrapper {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .purple-ring {
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      border: 32px solid var(--primary);
+      border-radius: 50%;
+      box-shadow: 0 20px 40px rgba(214, 34, 205, 0.15);
+      z-index: 1;
+    }
+
+    .outer-ring-line {
+      position: absolute;
+      width: 380px;
+      height: 380px;
+      border: 1px solid rgba(214, 34, 205, 0.15);
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .avatar-img {
+      position: absolute;
+      z-index: 2;
+      border-radius: 50%;
+      clip-path: circle(50% at 50% 50%);
+      object-fit: cover;
+      aspect-ratio: 1/1;
+      bottom: 55px;
+      width: 260px;
+      height: 260px;
+    }
+
+    /* SECTION 2: ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .about-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      background: #fafafa;
+      padding: 30px;
+      border-radius: 24px;
+    }
+
+    .about-meta-box h4 {
+      font-size: 0.85em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .about-meta-box p {
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    .skills-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .skill-pill {
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      font-weight: 500;
+    }
+
+    /* SECTION 3 & 4: TIMELINES (EDUCATION & EXPERIENCES) */
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .timeline-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      padding: 30px;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.01);
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .timeline-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+      box-shadow: 0 15px 30px rgba(214, 34, 205, 0.05);
+    }
+
+    .card-date-badge {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 0.8em;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+    }
+
+    .card-headline {
+      font-size: 1.25em;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+    }
+
+    .card-subheadline {
+      font-size: 0.95em;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .card-bullet-list {
+      padding-left: 18px;
+      color: var(--text-muted);
+      font-size: 0.9em;
+    }
+
+    .card-bullet-list li {
+      margin-bottom: 8px;
+    }
+
+    /* SECTION 5: PORTFOLIO */
+    .portfolio-intro {
+      color: var(--text-muted);
+      margin-bottom: 30px;
+      max-width: 750px;
+      line-height: 1.6;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .portfolio-item-card {
+      background: #fafafa;
+      border: 1px solid var(--border-color);
+      padding: 20px;
+      border-radius: 16px;
+      font-size: 0.9em;
+      color: var(--text-dark);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.2s;
+    }
+
+    .portfolio-item-card:hover {
+      border-color: var(--primary);
+      background: var(--primary-light);
+      color: var(--primary);
+      transform: scale(1.02);
+    }
+
+    .portfolio-icon {
+      background: #ffffff;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.85em;
+      color: var(--text-muted);
+    }
+
+    /* Layout Responsiveness Rules */
+    @media (max-width: 992px) {
+      .app-container {
+        padding: 30px;
+      }
+      .nav-links {
+        display: none; 
+      }
+      .hero-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .accent-line {
+        margin: 0 auto 24px auto;
+      }
+      .hero-content {
+        margin: 0 auto;
+        order: 2;
+      }
+      .hero-visual {
+        order: 1;
+        margin-bottom: 20px;
+      }
+      .cta-group {
+        justify-content: center;
+      }
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- EXACT CONTAINER STYLE REQUESTED -->
-  <div style="max-width: 950px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border-radius: 16px; overflow: hidden; font-family: 'Poppins', sans-serif; color: #333333; background: #ffffff;">
+  <div class="app-container">
     
- <!-- HEADER PROFILE -->
-<div style="display: flex; align-items: center; justify-content: space-between; background: linear-gradient(135deg, #fdf8fd 0%, #f5e4f4 100%); padding: 55px 50px; color: #333; border-bottom: 1px solid #f0caee; width: 950px; box-sizing: border-box; position: relative; overflow: hidden;">
-  
-  <!-- Subtle creative geometric background grids for a modern tech/creative edge -->
-  <div style="position: absolute; top: -20px; right: -20px; width: 180px; height: 180px; background-image: radial-gradient(rgba(214, 34, 205, 0.15) 1.5px, transparent 1.5px); background-size: 12px 12px; pointer-events: none; opacity: 0.7;"></div>
-  <div style="position: absolute; bottom: 0; left: 10%; width: 300px; height: 4px; background: linear-gradient(90deg, transparent, rgba(214, 34, 205, 0.2), transparent);"></div>
-
-  <!-- Left Content Column -->
-  <div style="text-align: left; position: relative; z-index: 2;">
-    <h1 style="margin: 0; font-size: 3.4em; font-weight: 700; color: #D622CD; letter-spacing: -1.5px; line-height: 1.05;">Aye Mon San</h1>
-    <div style="margin-top: 12px; display: flex; align-items: center;">
-      <span style="height: 2px; width: 24px; background: #D622CD; display: inline-block; margin-right: 10px;"></span>
-      <h3 style="margin: 0; font-size: 1.2em; font-weight: 600; color: #555555; letter-spacing: 2px; text-transform: uppercase;">English Instructor</h3>
-    </div>
-  </div>
-
-  <!-- ULTIMATE CREATIVE PORTRAIT FRAME DESIGN -->
-  <div style="position: relative; width: 155px; height: 155px; flex-shrink: 0; margin-right: 20px; z-index: 2;">
-    
-    <!-- Outer abstract glowing ring -->
-    <div style="position: absolute; top: -6px; left: -6px; width: 163px; height: 163px; border-radius: 32px; background: linear-gradient(135deg, #D622CD, rgba(214, 34, 205, 0.1)); opacity: 0.4; transform: rotate(-6deg); z-index: 1;"></div>
-    
-    <!-- Solid geometric framing background element offset right -->
-    <div style="position: absolute; top: 6px; left: 6px; width: 147px; height: 147px; border-radius: 28px; background: #ffffff; border: 2px dashed rgba(214, 34, 205, 0.4); z-index: 2;"></div>
-    
-    <!-- Main Premium Image Container with a clean gradient border effect -->
-    <div style="position: absolute; top: 0; left: 0; width: 151px; height: 151px; border-radius: 28px; padding: 4px; background: linear-gradient(135deg, #D622CD 0%, #f5e4f4 100%); box-shadow: 0 12px 28px rgba(214, 34, 205, 0.16); z-index: 3; box-sizing: border-box;">
-      <div style="width: 100%; height: 100%; border-radius: 24px; overflow: hidden; background: #ffffff;">
-        <img src="amscvphoto.jpg" alt="Aye Mon San Photo" width="143" height="143" style="object-fit: cover; width: 100%; height: 100%; display: block;">
+    <!-- HEADER WEBSITE NAVIGATION -->
+    <nav>
+      <div class="logo">
+        <div class="logo-icon">C</div>
+        instructor<span>.</span>
       </div>
-    </div>
-    
-  </div>
+      
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experiences">Experiences</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+      </ul>
 
-</div>
-    <!-- MAIN BODY LAYOUT -->
-    <div style="display: flex; background: #ffffff; width: 950px; box-sizing: border-box;">
+      <a href="mailto:miayemonsan34@gmail.com" class="btn-contact-nav">Contact</a>
+    </nav>
 
-      <!-- LEFT SIDEBAR -->
-      <div style="width: 320px; min-width: 320px; background: #faf8fc; padding: 40px 30px; border-right: 1px solid #f5eef4; line-height: 1.7; box-sizing: border-box;">
+    <!-- 1. HOME SECTION -->
+    <section class="content-section hero-layout" id="home">
+      <div class="hero-content">
+        <div class="accent-line"></div>
+        <h1>I'm <span>Aye Mon San</span>,<br>an <span>English Instructor</span></h1>
+        <div class="hero-tagline">English Instructor | TEFL Certified | Passionate Educator</div>
+        <p>
+          Passionate about creating inclusive and engaging learning environments where students can develop strong English communication skills while building cultural awareness and confidence.
+        </p>
+        <div class="cta-group">
+          <a href="mailto:miayemonsan34@gmail.com" class="btn-primary">Contact Me</a>
+          <a href="#portfolio" class="btn-secondary">Browse Portfolio</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="circle-wrapper">
+          <div class="outer-ring-line"></div>
+          <div class="purple-ring"></div>
+          <img src="amscvphoto.jpg" alt="Aye Mon San Portrait" class="avatar-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT SECTION -->
+    <section class="content-section" id="about">
+      <h3 class="section-headline">About Me</h3>
+      <div class="about-grid" style="margin-top: 20px;">
+        <div>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 20px; text-align: justify;">
+            I am a passionate English instructor and English Communication student with experience in online teaching, tutoring, and community education. I enjoy helping learners build confidence in English through engaging, student-centered lessons while promoting intercultural understanding and lifelong learning.
+          </p>
+          <h4 style="font-size: 1.1em; font-weight: 700; color: var(--text-dark); margin-top: 25px;">Core Teaching Competencies</h4>
+          <div class="skills-flex">
+            <span class="skill-pill">Classroom Management</span>
+            <span class="skill-pill">Lesson Planning</span>
+            <span class="skill-pill">English Language Instruction</span>
+            <span class="skill-pill">Public Speaking</span>
+            <span class="skill-pill">Cross-cultural Communication</span>
+            <span class="skill-pill">Active Listening</span>
+            <span class="skill-pill">Adaptability</span>
+          </div>
+        </div>
         
-        <!-- CONTACT -->
-        <h3 style="color: #D622CD; font-size: 1.1em; text-transform: uppercase; letter-spacing: 1px; margin-top: 0; margin-bottom: 12px; border-bottom: 2px solid #D622CD; padding-bottom: 5px;">Contact</h3>
-        <div style="font-size: 0.9em; margin-bottom: 35px;">
-          <p style="margin: 6px 0;"><b>Phone:</b> 092-396-9849</p>
-          <p style="margin: 6px 0;"><b>Email:</b> <a href="mailto:miayemonsan34@gmail.com" style="color: #D622CD; text-decoration: none; font-weight: 600;">miayemonsan34@gmail.com</a></p>
-          <p style="margin: 6px 0;"><b>Address:</b> Chiang Mai, Thailand</p>
+        <div class="about-details">
+          <div class="about-meta-box"><h4>Nationality</h4><p>Myanmar</p></div>
+          <div class="about-meta-box"><h4>Languages</h4><p>Mon, Burmese, English, Thai</p></div>
+          <div class="about-meta-box"><h4>Age / Gender</h4><p>27 / Female</p></div>
+          <div class="about-meta-box"><h4>Current Base</h4><p>Chiang Mai, Thailand</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. EDUCATION SECTION -->
+    <section class="content-section" id="education">
+      <h3 class="section-headline">Education</h3>
+      <div class="timeline-grid" style="margin-top: 20px;">
+        
+        <div class="timeline-card">
+          <span class="card-date-badge">2024 – Present</span>
+          <h4 class="card-headline">B.A. in English Communication Arts</h4>
+          <p class="card-subheadline">Payap University</p>
         </div>
 
-        <!-- PERSONAL INFO -->
-        <h3 style="color: #D622CD; font-size: 1.1em; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; border-bottom: 2px solid #D622CD; padding-bottom: 5px;">Personal Info</h3>
-        <ul style="list-style: none; padding: 0; margin: 0 0 35px 0; font-size: 0.9em;">
-          <li style="margin: 6px 0;"><b>Gender:</b> Female</li>
-          <li style="margin: 6px 0;"><b>Age:</b> 27</li>
-          <li style="margin: 6px 0;"><b>Nationality:</b> Myanmar</li>
-          <li style="margin: 6px 0;"><b>Marital Status:</b> Single</li>
-        </ul>
+        <div class="timeline-card">
+          <span class="card-date-badge">2021 – 2024</span>
+          <h4 class="card-headline">Associate Degree in Mass Media and Journalism</h4>
+          <p class="card-subheadline">Mon National College</p>
+        </div>
 
-        <!-- LANGUAGES -->
-        <h3 style="color: #D622CD; font-size: 1.1em; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; border-bottom: 2px solid #D622CD; padding-bottom: 5px;">Languages</h3>
-        <ul style="padding-left: 18px; margin: 0 0 35px 0; font-size: 0.9em;">
-          <li style="margin: 6px 0;">Mon <span style="color: #666; font-size: 0.85em;">(Native)</span></li>
-          <li style="margin: 6px 0;">Burmese <span style="color: #666; font-size: 0.85em;">(Fluent)</span></li>
-          <li style="margin: 6px 0;">English <span style="color: #666; font-size: 0.85em;">(Proficient)</span></li>
-          <li style="margin: 6px 0;">Thai <span style="color: #666; font-size: 0.85em;">(Intermediate)</span></li>
-        </ul>
+        <div class="timeline-card">
+          <span class="card-date-badge">2018 – 2019</span>
+          <h4 class="card-headline">B.A. in English</h4>
+          <p class="card-subheadline">Hpa-An Distance University</p>
+        </div>
 
-        <!-- SKILLS -->
-        <h3 style="color: #D622CD; font-size: 1.1em; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; border-bottom: 2px solid #D622CD; padding-bottom: 5px;">Skills</h3>
-        <ul style="padding-left: 18px; margin: 0 0 35px 0; font-size: 0.9em;">
-          <li style="margin: 6px 0;">Classroom Management</li>
-          <li style="margin: 6px 0;">Communication & Presentation</li>
-          <li style="margin: 6px 0;">Public Speaking & Leadership</li>
-          <li style="margin: 6px 0;">Cross-cultural Understanding</li>
-          <li style="margin: 6px 0;">Active Listening & Adaptability</li>
-        </ul>
-
-        <!-- CERTIFICATES -->
-        <h3 style="color: #D622CD; font-size: 1.1em; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; border-bottom: 2px solid #D622CD; padding-bottom: 5px;">Certificates</h3>
-        <ul style="padding-left: 18px; margin: 0; font-size: 0.85em; color: #444444; line-height: 1.6;">
-          <li style="margin: 6px 0;">TEFL Certification</li>
-          <li style="margin: 6px 0;">English for Career Development</li>
-          <li style="margin: 6px 0;">Teaching English in Primary Education</li>
-          <li style="margin: 6px 0;">Supporting Learning in Primary Education</li>
-          <li style="margin: 6px 0;">Teaching Refugees & Displaced Learners</li>
-          <li style="margin: 6px 0;">Supporting Children's Mental Health</li>
-          <li style="margin: 6px 0;">Gender in Language Education</li>
-          <li style="margin: 6px 0;">Teaching Pronunciation & Listening Systems</li>
-          <li style="margin: 6px 0;">Understanding Language Systems</li>
-          <li style="margin: 6px 0;">Primary Education: Listening & Observing</li>
-          <li style="margin: 6px 0;">Young Children, the Outdoors, and Nature</li>
-          <li style="margin: 6px 0;">Business Knowledge Sharing Workshop</li>
-          <li style="margin: 6px 0;">Career Planning and Job Search</li>
-          <li style="margin: 6px 0;">Mon Intensive English Program</li>
-          <li style="margin: 6px 0;">General English (Elementary Level)</li>
-          <li style="margin: 6px 0;">High School Certificate</li>
-        </ul>
       </div>
+    </section>
 
-      <!-- RIGHT MAIN CONTENT -->
-      <div style="width: 630px; min-width: 630px; padding: 40px 45px; line-height: 1.7; box-sizing: border-box;">
-
-        <!-- OBJECTIVE -->
-        <h3 style="color: #D622CD; font-size: 1.3em; text-transform: uppercase; letter-spacing: 1px; margin-top: 0; margin-bottom: 15px; border-bottom: 2px solid #D622CD; padding-bottom: 6px;">Career Objective</h3>
-        <p style="color: #444444; margin: 0 0 35px 0; font-size: 0.95em; text-align: justify;">
-          Motivated and passionate English Communication student with a strong interest in teaching, intercultural communication, and lifelong learning. Experienced in volunteer teaching and community education projects. Dedicated to fostering inclusive, engaging learning environments that encourage students to develop both linguistic and cultural competence.
-        </p>
-
-        <!-- EXPERIENCE -->
-        <h3 style="color: #D622CD; font-size: 1.3em; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 25px; border-bottom: 2px solid #D622CD; padding-bottom: 6px;">Work Experience</h3>
+    <!-- 4. EXPERIENCES SECTION -->
+    <section class="content-section" id="experiences">
+      <h3 class="section-headline">Work Experience</h3>
+      <div class="timeline-grid" style="margin-top: 20px;">
         
         <!-- Job 1 -->
-        <div style="margin-bottom: 25px;">
-          <div style="display: flex; justify-content: space-between; align-items: baseline;">
-            <span style="font-size: 1.1em; font-weight: 700; color: #222;">General English Teacher</span>
-            <span style="color: #777777; font-size: 0.85em; font-weight: 500;">2025 – 2026</span>
-          </div>
-          <div style="color: #D622CD; font-weight: 600; font-size: 0.9em; margin-bottom: 6px;">Poy English Program (Online)</div>
-          <ul style="padding-left: 20px; margin: 0; color: #444444; font-size: 0.9em;">
-            <li style="margin-bottom: 4px;">Taught English online, cultivating a welcoming, supportive, and inclusive learning environment.</li>
-            <li>Integrated practical conversational skills and foundational grammar structures into modern lesson formats.</li>
+        <div class="timeline-card">
+          <span class="card-date-badge">2025 – 2026</span>
+          <h4 class="card-headline">General English Teacher</h4>
+          <p class="card-subheadline">Poy English Program (Online)</p>
+          <ul class="card-bullet-list">
+            <li>Delivered engaging online English lessons in a supportive and inclusive learning environment.</li>
+            <li>Designed interactive lessons focusing on practical communication skills, grammar, vocabulary, and pronunciation.</li>
           </ul>
         </div>
 
         <!-- Job 2 -->
-        <div style="margin-bottom: 25px;">
-          <div style="display: flex; justify-content: space-between; align-items: baseline;">
-            <span style="font-size: 1.1em; font-weight: 700; color: #222;">Freelance English Tutor</span>
-            <span style="color: #777777; font-size: 0.85em; font-weight: 500;">Sep 2024 – Jul 2025</span>
-          </div>
-          <div style="color: #D622CD; font-weight: 600; font-size: 0.9em; margin-bottom: 6px;">Online Marketplace</div>
-          <ul style="padding-left: 20px; margin: 0; color: #444444; font-size: 0.9em;">
-            <li style="margin-bottom: 4px;">Provided specialized 1-on-1 and targeted group English lessons to learners from diverse cultural backgrounds.</li>
-            <li>Focused on advancing conversational fluidity, accent reduction, and grammar accuracy via high-engagement interactive sessions.</li>
+        <div class="timeline-card">
+          <span class="card-date-badge">Sep 2024 – Jul 2025</span>
+          <h4 class="card-headline">Freelance English Tutor</h4>
+          <p class="card-subheadline">Online Marketplace</p>
+          <ul class="card-bullet-list">
+            <li>Delivered personalized one-on-one and small-group English lessons to learners from diverse cultural backgrounds.</li>
+            <li>Helped students improve speaking fluency, pronunciation, vocabulary, and grammar through interactive learning activities.</li>
           </ul>
         </div>
 
         <!-- Job 3 -->
-        <div style="margin-bottom: 25px;">
-          <div style="display: flex; justify-content: space-between; align-items: baseline;">
-            <span style="font-size: 1.1em; font-weight: 700; color: #222;">Volunteer Teacher</span>
-            <span style="color: #777777; font-size: 0.85em; font-weight: 500;">Jan 2025</span>
-          </div>
-          <div style="color: #D622CD; font-weight: 600; font-size: 0.9em; margin-bottom: 6px;">Chiang Rai Kindergarten</div>
-          <ul style="padding-left: 20px; margin: 0; color: #444444; font-size: 0.9em;">
-            <li style="margin-bottom: 4px;">Assisted in school-wide development initiatives and executed immersive English learning activities.</li>
-            <li style="margin-bottom: 4px;">Organized dynamic, educational games designed to maximize classroom engagement and active retention.</li>
-            <li>Collaborated closely with lead teachers on targeted lesson execution and strategic classroom management.</li>
+        <div class="timeline-card">
+          <span class="card-date-badge">Jan 2025</span>
+          <h4 class="card-headline">Volunteer Teacher</h4>
+          <p class="card-subheadline">Chiang Rai Kindergarten</p>
+          <ul class="card-bullet-list">
+            <li>Assisted teachers in classroom activities and supported English learning through interactive games and creative lessons.</li>
+            <li>Organized educational games and activities to encourage student participation and active learning.</li>
           </ul>
         </div>
 
         <!-- Job 4 -->
-        <div style="margin-bottom: 35px;">
-          <div style="display: flex; justify-content: space-between; align-items: baseline;">
-            <span style="font-size: 1.1em; font-weight: 700; color: #222;">Accountant</span>
-            <span style="color: #777777; font-size: 0.85em; font-weight: 500;">Nov 2018 – Jan 2019</span>
-          </div>
-          <div style="color: #D622CD; font-weight: 600; font-size: 0.9em; margin-bottom: 6px;">Nay La Kabar Co., Ltd.</div>
-          <ul style="padding-left: 20px; margin: 0; color: #444444; font-size: 0.9em;">
-            <li style="margin-bottom: 4px;">Managed daily financial logging profiles and assisted in the structuring of precise transactional reports.</li>
-            <li style="margin-bottom: 4px;">Reconciled balance inquiries against incoming vendor invoices while monitoring strict operational budget limits.</li>
-            <li>Assisted corporate teams in compiling accurate end-of-month financial summary records.</li>
+        <div class="timeline-card">
+          <span class="card-date-badge">Nov 2018 – Jan 2019</span>
+          <h4 class="card-headline">Accountant</h4>
+          <p class="card-subheadline">Nay La Kabar Co., Ltd.</p>
+          <ul class="card-bullet-list">
+            <li>Recorded daily financial transactions and prepared accurate financial reports.</li>
+            <li>Reconciled accounts, verified invoices, and maintained accurate financial records.</li>
           </ul>
         </div>
 
-        <!-- EDUCATION -->
-        <h3 style="color: #D622CD; font-size: 1.3em; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; border-bottom: 2px solid #D622CD; padding-bottom: 6px;">Education</h3>
-        
-        <!-- Edu 1 -->
-        <div style="margin-bottom: 20px;">
-          <div style="display: flex; justify-content: space-between; align-items: baseline;">
-            <span style="font-weight: 700; color: #222; font-size: 1.05em;">B.A. in English Communication Arts</span>
-            <span style="color: #777777; font-size: 0.85em; font-weight: 500;">2024 – Present</span>
-          </div>
-          <div style="color: #D622CD; font-size: 0.9em; font-weight: 600; margin-top: 2px;">Payap University</div>
-        </div>
-
-        <!-- Edu 2 -->
-        <div style="margin-bottom: 20px;">
-          <div style="display: flex; justify-content: space-between; align-items: baseline;">
-            <span style="font-weight: 700; color: #222; font-size: 1.05em;">Associate Degree of Arts in Mass Media and Journalism</span>
-            <span style="color: #777777; font-size: 0.85em; font-weight: 500;">2021 – 2024</span>
-          </div>
-          <div style="color: #D622CD; font-size: 0.9em; font-weight: 600; margin-top: 2px;">Mon National College</div>
-        </div>
-
-        <!-- Edu 3 -->
-        <div style="margin-bottom: 5px;">
-          <div style="display: flex; justify-content: space-between; align-items: baseline;">
-            <span style="font-weight: 700; color: #222; font-size: 1.05em;">B.A. in English</span>
-            <span style="color: #777777; font-size: 0.85em; font-weight: 500;">2018 – 2019</span>
-          </div>
-          <div style="color: #D622CD; font-size: 0.9em; font-weight: 600; margin-top: 2px;">Hpa-An Distance University</div>
-        </div>
-
       </div>
-    </div>
+    </section>
+
+    <!-- 5. PORTFOLIO SECTION -->
+    <section class="content-section" id="portfolio">
+      <h3 class="section-headline">Certifications & Achievements</h3>
+      <p class="portfolio-intro">A collection of professional certifications, training programs, and academic achievements that reflect my commitment to continuous learning and professional development:</p>
+      
+      <div class="portfolio-grid">
+        <div class="portfolio-item-card"><div class="portfolio-icon">🎓</div> TEFL Certification</div>
+        <div class="portfolio-item-card"><div class="portfolio-icon">📜</div> English for Career Development</div>
+        <div class="portfolio-item-card"><div class="portfolio-icon">📜</div> Teaching English in Primary Education</div>
+        <div class="portfolio-item-card"><div class="portfolio-icon">📜</div> Supporting Learning in Primary Education</div>
+        <div class="portfolio-item-card"><div class="portfolio-icon">📜</div> Teaching English to Refugees and Displaced Learners</div>
+        <div class="portfolio-item-card"><div class="portfolio-icon">📜</div> Supporting Children's Mental Health</div>
+        <div class="portfolio-item-card"><div class="portfolio-icon">📜</div> Gender in Language Education</div>
+        <div class="portfolio-item-card"><div class="portfolio-icon">📜</div> Teaching Pronunciation and Listening Skills</div>
+        <div class="portfolio-item-card"><div class="portfolio-icon">📜</div> Understanding English Language Systems</div>
+        <div class="portfolio-item-card"><div class="portfolio-icon">📜</div> Listening and Observation in Primary Education</div>
+        <div class="portfolio-item-card"><div class="portfolio-icon">📜</div> Young Children, Nature, and Outdoor Learning</div>
+        <div class="portfolio-item-card"><div class="portfolio-icon">💼</div> Business Knowledge Sharing Workshop</div>
+        <div class="portfolio-item-card"><div class="portfolio-icon">💼</div> Career Planning and Job Search</div>
+        <div class="portfolio-item-card"><div class="portfolio-icon">🏫</div> Mon Intensive English Program</div>
+        <div class="portfolio-item-card"><div class="portfolio-icon">🏫</div> General English – Elementary Level</div>
+        <div class="portfolio-item-card"><div class="portfolio-icon">🎓</div> High School Certificate</div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      &copy; 2026 Aye Mon San. All rights reserved.
+    </footer>
+
   </div>
 
+  <!-- Optional Script to handle active tab swapping while clicking links -->
+  <script>
+    const links = document.querySelectorAll('.nav-links a');
+    links.forEach(link => {
+      link.addEventListener('click', function() {
+        links.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
