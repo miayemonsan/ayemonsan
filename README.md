@@ -210,7 +210,7 @@
             <span style="font-weight: 700; color: #222; font-size: 1.05em;">B.A. in English</span>
             <span style="color: #777777; font-size: 0.85em; font-weight: 500;">2018 – 2019</span>
           </div>
-          <div style="color: #D622CD; font-size: 0.9em; font-weight: 600; margin-top: 2px;">Hpa-An Distance University</div>
+          <div style="color: #D622CD; font-size: 0.9em; font-weight: 600; margin-top: 2px;">Hpa-An University</div>
         </div>
 <h3 style="color:#4b0082; border-bottom:3px solid #d0b3f2;"> Online Presence</h3>
     <p>LinkedIn</p>
