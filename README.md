@@ -46,7 +46,7 @@
         <!-- Main Premium Image Container with a clean gradient border effect -->
         <div style="position: absolute; top: 0; left: 0; width: 151px; height: 151px; border-radius: 28px; padding: 4px; background: linear-gradient(135deg, #D622CD 0%, #f5e4f4 100%); box-shadow: 0 12px 28px rgba(214, 34, 205, 0.16); z-index: 3; box-sizing: border-box;">
           <div style="width: 100%; height: 100%; border-radius: 24px; overflow: hidden; background: #ffffff;">
-            <img src="profile.JPG" alt="Aye Mon San Photo" width="143" height="143" style="object-fit: cover; width: 100%; height: 100%; display: block;">
+            <img src="profile.jpeg" alt="Aye Mon San Photo" width="143" height="143" style="object-fit: cover; width: 100%; height: 100%; display: block;">
           </div>
         </div>
         
