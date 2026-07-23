@@ -212,7 +212,9 @@
           </div>
           <div style="color: #D622CD; font-size: 0.9em; font-weight: 600; margin-top: 2px;">Hpa-An Distance University</div>
         </div>
-
+<h3 style="color:#4b0082; border-bottom:3px solid #d0b3f2;"> Online Presence</h3>
+    <p>LinkedIn</p>
+    <p>www.linkedin.com/in/mi-aye-mon-san-328346295</p>
       </div>
     </div>
   </div>
