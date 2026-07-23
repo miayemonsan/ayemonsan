@@ -122,7 +122,7 @@
         <!-- OBJECTIVE -->
         <h3 style="color: #D622CD; font-size: 1.3em; text-transform: uppercase; letter-spacing: 1px; margin-top: 0; margin-bottom: 15px; border-bottom: 2px solid #D622CD; padding-bottom: 6px;">Career Objective</h3>
         <p style="color: #444444; margin: 0 0 35px 0; font-size: 0.95em; text-align: justify;">
-          Motivated and passionate English Communication student with a strong interest in teaching, intercultural communication, and lifelong learning. Experienced in volunteer teaching and community education projects. Dedicated to fostering inclusive, engaging learning environments that encourage students to develop both linguistic and cultural competence.
+          Dedicated English educator with experience in online tutoring, volunteer teaching, and community-based education. Skilled in delivering learner-centered lessons that foster confidence, effective communication, and active participation. Committed to creating inclusive learning environments, promoting intercultural understanding, and supporting students' academic and personal growth. Eager to contribute professionalism, adaptability, and a passion for teaching to a dynamic educational institution.
         </p>
 
         <!-- EXPERIENCE -->
