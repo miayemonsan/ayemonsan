@@ -1,4 +1,3 @@
-
 <head>
   <meta charset="UTF-8">
   <!-- This forces mobile screens to scale out and display the 950px wide layout fully -->
