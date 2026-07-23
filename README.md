@@ -87,6 +87,7 @@
         <!-- SKILLS -->
         <h3 style="color: #D622CD; font-size: 1.1em; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; border-bottom: 2px solid #D622CD; padding-bottom: 5px;">Skills</h3>
         <ul style="padding-left: 18px; margin: 0 0 35px 0; font-size: 0.9em;">
+           <li style="margin: 6px 0;">Teaching methodology</li>
           <li style="margin: 6px 0;">Classroom Management</li>
           <li style="margin: 6px 0;">Communication & Presentation</li>
           <li style="margin: 6px 0;">Public Speaking & Leadership</li>
