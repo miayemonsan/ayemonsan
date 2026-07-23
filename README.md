@@ -214,7 +214,7 @@
         </div>
 <h3 style="color:#4b0082; border-bottom:3px solid #d0b3f2;"> Online Presence</h3>
     <p>LinkedIn</p>
-    <p>[www.linkedin.com/in/mi-aye-mon-san-328346295](https://www.linkedin.com/in/aye-mon-san-7ab968390/)</p>
+    <p>(https://www.linkedin.com/in/aye-mon-san-7ab968390/)</p>
       </div>
     </div>
   </div>
