@@ -212,9 +212,15 @@
           </div>
           <div style="color: #D622CD; font-size: 0.9em; font-weight: 600; margin-top: 2px;">Hpa-An University</div>
         </div>
-<h3 style="color:#4b0082; border-bottom:3px solid #d0b3f2;"> Online Presence</h3>
-    <p>LinkedIn</p>
-    <p>(https://www.linkedin.com/in/aye-mon-san-7ab968390/)</p>
-      </div>
+<h3 style="color:#4b0082; border-bottom:3px solid #d0b3f2;">Online Presence</h3>
+
+<p><strong>LinkedIn</strong></p>
+
+<p>
+    <a href="https://www.linkedin.com/in/aye-mon-san-7ab968390/" target="_blank">
+        https://www.linkedin.com/in/aye-mon-san-7ab968390/
+    </a>
+</p>
+ </div>
     </div>
   </div>
