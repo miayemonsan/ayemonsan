@@ -146,7 +146,7 @@
         <div style="margin-bottom: 25px;">
           <div style="display: flex; justify-content: space-between; align-items: baseline;">
             <span style="font-size: 1.1em; font-weight: 700; color: #222;">Freelance English Tutor</span>
-            <span style="color: #777777; font-size: 0.85em; font-weight: 500;">Sep 2024 – Jul 2025</span>
+            <span style="color: #777777; font-size: 0.85em; font-weight: 500;">Sep 2024 – Present</span>
           </div>
           <div style="color: #D622CD; font-weight: 600; font-size: 0.9em; margin-bottom: 6px;">Online Marketplace</div>
           <ul style="padding-left: 20px; margin: 0; color: #444444; font-size: 0.9em;">
